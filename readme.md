@@ -2,7 +2,7 @@
 
 The most advanced VS Code extension that combines AI-powered autocomplete, superior multi-language formatting, and a premium Dracula theme. Built to surpass existing extensions in functionality, performance, and user experience.
 
-### Demo 🔗 Try the Extension : [Click Here]([https://example.com](https://marketplace.visualstudio.com/items?itemName=sainath-k.ramp-vscode-extension))
+### Demo 🔗 Try the Extension : <a href="https://marketplace.visualstudio.com/items?itemName=sainath-k.ramp-vscode-extension" target="_blank">Click Here</a>
 
 ## ✨ Features
 
