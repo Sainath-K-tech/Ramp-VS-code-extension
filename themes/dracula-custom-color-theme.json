@@ -1,0 +1,67 @@
+{
+  "$schema": "vscode://schemas/color-theme",
+  "name": "Dracula (Super Ext)",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#ff79c6",
+    "editor.foreground": "#f8f8f2",
+    "editorLineNumber.foreground": "#6272a4",
+    "editorCursor.foreground": "#f8f8f2",
+    "editor.selectionBackground": "#44475a",
+    "editor.inactiveSelectionBackground": "#44475a80"
+  },
+  "tokenColors": [
+    {
+      "scope": ["comment"],
+      "settings": { "foreground": "#6272a4" }
+    },
+    {
+      "scope": ["keyword", "storage.type", "storage.modifier"],
+      "settings": { "foreground": "#ff79c6" }
+    },
+    {
+      "scope": ["string", "constant.character.escape"],
+      "settings": { "foreground": "#f1fa8c" }
+    },
+    {
+      "scope": ["constant.numeric", "constant.language"],
+      "settings": { "foreground": "#bd93f9" }
+    },
+    {
+      "scope": ["variable", "variable.parameter", "support.variable"],
+      "settings": { "foreground": "#50fa7b" }
+    },
+    {
+      "scope": ["entity.name.function", "support.function"],
+      "settings": { "foreground": "#50fa7b" }
+    },
+    {
+      "scope": ["entity.name.tag"], 
+      "settings": { "foreground": "#50fa7b" }
+    },
+    {
+      "scope": ["entity.other.attribute-name.css", "support.type.property-name.css"],
+      "settings": { "foreground": "#ff79c6" } 
+    },
+    {
+      "scope": ["support.constant.property-value.css", "support.constant.color.w3c-standard-color-name.css"],
+      "settings": { "foreground": "#bd93f9" } 
+    },
+    {
+      "scope": ["keyword.control.at-rule.css"],
+      "settings": { "foreground": "#ff79c6" }
+    },
+    {
+      "scope": ["entity.other.attribute-name.class.css"],
+      "settings": { "foreground": "#8be9fd" } 
+    },
+    {
+      "scope": ["entity.other.attribute-name.id.css"],
+      "settings": { "foreground": "#ffb86c" } 
+    },
+    {
+      "scope": ["constant.numeric.css", "keyword.other.unit.css"],
+      "settings": { "foreground": "#f1fa8c" }
+    }
+  ]
+}

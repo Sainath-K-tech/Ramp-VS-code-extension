@@ -1,0 +1,311 @@
+{
+  "name": "ramp-vscode-extension",
+  "displayName": "Ramp — Ultimate Developer Experience",
+  "description": "The most advanced VS Code extension: AI-powered autocomplete, superior formatting for 8+ languages, and premium Dracula theme. Better than any existing extension.",
+  "version": "1.0.0",
+  "publisher": "sainath-k",
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sainath-K-tech"
+  },
+  "keywords": [
+    "autocomplete",
+    "intellisense",
+    "formatter",
+    "prettier",
+    "dracula",
+    "theme",
+    "javascript",
+    "typescript",
+    "python",
+    "java",
+    "php",
+    "html",
+    "css",
+    "go",
+    "ai-powered",
+    "smart-completions"
+  ],
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Formatters",
+    "Themes",
+    "Snippets",
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ramp.showInfo",
+        "title": "Ramp: Show Extension Info",
+        "icon": "$(info)"
+      },
+      {
+        "command": "ramp.formatDocument",
+        "title": "Ramp: Format Document",
+        "icon": "$(symbol-method)"
+      },
+      {
+        "command": "ramp.toggleCompletions",
+        "title": "Ramp: Toggle Smart Completions",
+        "icon": "$(lightbulb)"
+      },
+      {
+        "command": "ramp.refreshCompletions",
+        "title": "Ramp: Refresh Completion Cache",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "ramp.analyzeWorkspace",
+        "title": "Ramp: Analyze Workspace for Better Completions",
+        "icon": "$(search)"
+      },
+      {
+        "command": "ramp.manageSnippets",
+        "title": "Ramp: Manage Code Snippets",
+        "icon": "$(symbol-snippet)"
+      },
+      {
+        "command": "ramp.showPerformanceReport",
+        "title": "Ramp: Show Performance Report",
+        "icon": "$(dashboard)"
+      },
+      {
+        "command": "ramp.showErrorSummary",
+        "title": "Ramp: Show Error Summary",
+        "icon": "$(warning)"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "ramp.formatDocument",
+          "when": "editorHasDocumentFormattingProvider",
+          "group": "1_modification"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "ramp.showInfo"
+        },
+        {
+          "command": "ramp.formatDocument",
+          "title": "Format Document with Ramp"
+        },
+        {
+          "command": "ramp.manageSnippets"
+        },
+        {
+          "command": "ramp.showPerformanceReport"
+        },
+        {
+          "command": "ramp.showErrorSummary"
+        },
+        {
+          "command": "ramp.toggleCompletions"
+        },
+        {
+          "command": "ramp.refreshCompletions"
+        },
+        {
+          "command": "ramp.analyzeWorkspace"
+        }
+      ]
+    },
+    "languages": [
+      {
+        "id": "javascript",
+        "aliases": [
+          "JavaScript"
+        ],
+        "extensions": [
+          ".js",
+          ".mjs",
+          ".cjs"
+        ]
+      },
+      {
+        "id": "typescript",
+        "aliases": [
+          "TypeScript"
+        ],
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ]
+      },
+      {
+        "id": "python",
+        "aliases": [
+          "Python"
+        ],
+        "extensions": [
+          ".py",
+          ".pyw"
+        ]
+      },
+      {
+        "id": "java",
+        "aliases": [
+          "Java"
+        ],
+        "extensions": [
+          ".java"
+        ]
+      },
+      {
+        "id": "php",
+        "aliases": [
+          "PHP"
+        ],
+        "extensions": [
+          ".php",
+          ".phtml"
+        ]
+      },
+      {
+        "id": "go",
+        "aliases": [
+          "Go"
+        ],
+        "extensions": [
+          ".go"
+        ]
+      },
+      {
+        "id": "html",
+        "aliases": [
+          "HTML"
+        ],
+        "extensions": [
+          ".html",
+          ".htm"
+        ]
+      },
+      {
+        "id": "css",
+        "aliases": [
+          "CSS"
+        ],
+        "extensions": [
+          ".css"
+        ]
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Ramp Configuration",
+      "properties": {
+        "ramp.completions.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable Ramp's intelligent autocomplete system"
+        },
+        "ramp.completions.aiPowered": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable AI-powered context-aware completions"
+        },
+        "ramp.completions.maxSuggestions": {
+          "type": "number",
+          "default": 50,
+          "minimum": 10,
+          "maximum": 200,
+          "description": "Maximum number of completion suggestions to show"
+        },
+        "ramp.completions.includeWorkspaceSymbols": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include symbols from workspace files in completions"
+        },
+        "ramp.completions.semanticAnalysis": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable semantic code analysis for better completions"
+        },
+        "ramp.formatting.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable Ramp's advanced formatting capabilities"
+        },
+        "ramp.formatting.formatOnSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically format files on save"
+        },
+        "ramp.formatting.formatOnType": {
+          "type": "boolean",
+          "default": false,
+          "description": "Format code as you type"
+        },
+        "ramp.formatting.preserveLineEndings": {
+          "type": "boolean",
+          "default": true,
+          "description": "Preserve original line endings when formatting"
+        },
+        "ramp.theme.enhancedColors": {
+          "type": "boolean",
+          "default": true,
+          "description": "Use enhanced Dracula color palette"
+        },
+        "ramp.performance.cacheEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable intelligent caching for better performance"
+        },
+        "ramp.performance.backgroundAnalysis": {
+          "type": "boolean",
+          "default": true,
+          "description": "Perform background code analysis for completions"
+        },
+        "ramp.errorHandling.showNotifications": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show error notifications and suggestions"
+        },
+        "ramp.errorHandling.autoReport": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically report critical errors (anonymized)"
+        }
+      }
+    },
+    "themes": [
+      {
+        "label": "Ramp Dracula Pro",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ramp-dracula-pro.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile &&  npm run bundle",
+    "compile": "tsc -p ./",
+    "bundle": "webpack --mode production",
+    "watch": "tsc -p ./ -w",
+    "pretest": "npm run compile",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/prettier": "^3.0.0",
+    "@types/vscode": "^1.80.0",
+    "@vscode/test-electron": "^2.3.0",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.2",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "js-beautify": "^1.14.0",
+    "prettier": "^3.0.0"
+  }
+}
